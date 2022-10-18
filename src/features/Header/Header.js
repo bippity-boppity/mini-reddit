@@ -4,7 +4,11 @@ import './Header.css';
 const Header = () => {
   return (
     <>
-      <p>Header</p>
+      <header>
+        <div className="container">
+          <p>Mini-Reddit</p>
+        </div>
+      </header>
     </>
   )
 };

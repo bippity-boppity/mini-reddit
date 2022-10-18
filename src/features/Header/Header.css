@@ -1,0 +1,12 @@
+header {
+  box-shadow: var(--box-shadow);
+  padding: var(--spacer-3);
+  text-align: center;
+  margin-bottom: var(--spacer-5);
+}
+
+header p {
+  color: var(--color-primary);
+  font-size: var(--spacer-4);
+  font-weight: bold;
+}

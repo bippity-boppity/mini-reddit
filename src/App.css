@@ -1,0 +1,24 @@
+:root {
+  --color-primary: cornflowerblue;
+  --color-background: #EFEFEF;
+
+  --box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15),inset 0 -1px 0 rgba(0,0,0,0.15);
+  --spacer-0: 0px;
+  --spacer-1: 4px;
+  --spacer-2: 8px;
+  --spacer-3: 16px;
+  --spacer-4: 24px;
+  --spacer-5: 32px;
+
+  --container-width: 1200px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacer-3);
+}
+
+p {
+  margin: 0;
+}
