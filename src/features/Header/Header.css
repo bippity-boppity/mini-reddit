@@ -1,0 +1,14 @@
+header {
+  padding: var(--spacer-3);
+  text-align: center;
+  margin-bottom: var(--spacer-5);
+  background-color: var(--color-light);
+  border-bottom: var(--border);
+}
+
+header h1 {
+  color: var(--color-primary);
+  font-size: var(--spacer-4);
+  font-weight: bold;
+
+}
