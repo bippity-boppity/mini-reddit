@@ -17,7 +17,31 @@ const Post = (props) => {
           </button>
         </div>
         <div className="post_content">
+          <p className="post_details"><strong>{post.subreddit_name_prefixed}</strong> posted by {post.author}</p>
           <p className="post_title">{post.title}</p>
+
+          {post.post_hint == 'image' &&
+            <div className="post_innerContent">
+              <img src={post.url} className="post_img" />
+            </div>
+          }
+
+          {post.post_hint == 'link' && 
+            <div className="post_innerContent">
+              <a href={post.url} target="_blank">
+                  {post.url.substring(0, 30)}
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+          }
+
+          {post.post_hint == 'hosted:video' && 
+            <div className="post_innerContent">
+              <video src={post.media.reddit_video.fallback_url} preload="none" controls width="100%"></video>
+            </div>
+          }
+
+          <p><i class="fa-solid fa-comment"></i> {post.num_comments} comments</p>
         </div>
       </div>
     </>

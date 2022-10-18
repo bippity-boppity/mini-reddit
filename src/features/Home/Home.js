@@ -14,19 +14,17 @@ const Home = () => {
     dispatch(fetchPosts(selectedSubreddit));
   }, [selectedSubreddit]);
 
-  // if (isLoading) {
-  //   return (
-  //     <p>Content Loading</p>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="home_loader">
+        <i className="fa-solid fa-spinner fa-spin fa-2xl"></i>
+      </div>
+    );
+  }
 
   return (
     <>
       <div className="container">
-        {isLoading === true &&
-          <p>Still loading</p>
-        }
-
         {posts.map((post, index) => (
           <Post
             key={post.id}
