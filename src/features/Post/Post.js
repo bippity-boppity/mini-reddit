@@ -1,7 +1,9 @@
 import React from "react";
 import "./Post.css";
 
-const Post = () => {
+const Post = (props) => {
+  const { post } = props;
+  
   return (
     <>
       <div className="post">
@@ -15,7 +17,7 @@ const Post = () => {
           </button>
         </div>
         <div className="post_content">
-          <p className="post_title">Post title</p>
+          <p className="post_title">{post.title}</p>
         </div>
       </div>
     </>
