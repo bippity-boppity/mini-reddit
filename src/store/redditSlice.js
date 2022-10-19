@@ -22,6 +22,10 @@ const redditSlice = createSlice({
     getPostsSuccess: (state, action) => {
       state.isLoading = false;
       state.posts = action.payload;
+    },
+    setSelectedSubreddit: (state, action) => {
+      state.isLoading = true;
+      state.selectedSubreddit = action.payload;
     }
   }
 });
@@ -29,7 +33,8 @@ const redditSlice = createSlice({
 export const {
   setPosts,
   startGetPosts,
-  getPostsSuccess
+  getPostsSuccess,
+  setSelectedSubreddit
 } = redditSlice.actions;
 
 export default redditSlice.reducer;
@@ -46,6 +51,8 @@ export const fetchPosts = (subreddit) => async (dispatch) => {
 
 const selectPosts = (state) => state.reddit.posts;
 const selectSearchTerm = (state) => state.reddit.searchTerm;
+export const selectSelectedSubreddit = (state) =>
+  state.reddit.selectedSubreddit;
 
 export const selectFilteredPosts = createSelector(
   [selectPosts, selectSearchTerm],

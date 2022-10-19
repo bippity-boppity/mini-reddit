@@ -2,3 +2,41 @@
   text-align: center;
   color: var(--color-primary);
 }
+
+.home_container {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.home_container .home_posts {
+  width: calc((100% * 2/3) - var(--spacer-3));
+}
+
+.home_container .home_subreddits {
+  width: calc((100% * 1/3) - var(--spacer-3));
+}
+
+.home_subreddit {
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+  margin-bottom: var(--spacer-3);
+  border: var(--border);
+  padding: var(--spacer-3);
+  color: var(--color-primary);
+}
+
+@media only screen and (max-width: 700px){
+  .home_container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between; 
+  }
+
+  .home_container .home_posts {
+    width: 100%;
+  }
+  
+  .home_container .home_subreddits {
+    width: 100%;
+  }
+}

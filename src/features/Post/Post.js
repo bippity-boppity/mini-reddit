@@ -1,5 +1,6 @@
 import React from "react";
 import "./Post.css";
+import formatNumber from "../../utils/formatNumber";
 
 const Post = (props) => {
   const { post } = props;
@@ -11,7 +12,7 @@ const Post = (props) => {
           <button type="button">
             <i className="fa-solid fa-arrow-up"></i>
           </button>
-          <p>56</p>
+          <p>{formatNumber(post.score, 1)}</p>
           <button type="button">
             <i className="fa-solid fa-arrow-down"></i>
           </button>
@@ -41,7 +42,7 @@ const Post = (props) => {
             </div>
           }
 
-          <p><i class="fa-solid fa-comment"></i> {post.num_comments} comments</p>
+          <p><i className="fa-solid fa-comment"></i> {formatNumber(post.num_comments, 1)} comments</p>
         </div>
       </div>
     </>

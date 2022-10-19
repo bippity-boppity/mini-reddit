@@ -3,6 +3,7 @@ import './Home.css';
 import Post from "../Post/Post";
 import { fetchPosts, selectFilteredPosts } from "../../store/redditSlice";
 import { useSelector, useDispatch } from "react-redux";
+import Subreddits from "../Subreddits/Subreddits";
 
 const Home = () => {
   const reddit = useSelector((state) => state.reddit);
@@ -25,12 +26,23 @@ const Home = () => {
   return (
     <>
       <div className="container">
-        {posts.map((post, index) => (
-          <Post
-            key={post.id}
-            post={post}
-          />
-        ))}
+        <div className="home_container">
+          <div className="home_posts">
+            <div className="home_subreddit">
+              <p><strong>Showing: {selectedSubreddit}</strong></p>
+            </div>
+
+            {posts.map((post, index) => (
+              <Post
+                key={post.id}
+                post={post}
+              />
+            ))}
+          </div>
+          <div className="home_subreddits">
+            <Subreddits />
+          </div>
+        </div>
       </div>
     </>
   )
