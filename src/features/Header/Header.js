@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <header>
         <div className="container">
-          <h1><i class="fa-brands fa-reddit"></i> Mini-Reddit</h1>
+          <h1><i className="fa-brands fa-reddit"></i> Mini-Reddit</h1>
         </div>
       </header>
     </>

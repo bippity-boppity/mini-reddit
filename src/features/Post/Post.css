@@ -22,3 +22,22 @@
 .post .post_content {
   padding: var(--spacer-3);
 }
+
+.post .post_details {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacer-2);
+}
+
+.post .post_title {
+  font-weight: bold;
+  margin-bottom: var(--spacer-3);
+}
+
+.post .post_img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.post .post_innerContent {
+  margin-bottom: var(--spacer-3);
+}

@@ -1,0 +1,28 @@
+.subreddits_container {
+  border-radius: var(--border-radius);
+  background-color: var(--color-light);
+  margin-bottom: var(--spacer-3);
+  border: var(--border);
+  padding: var(--spacer-3);
+}
+
+.subreddits_container h2 {
+  font-size: var(--font-size-regular);
+  color: var(--color-primary);
+  margin-bottom: var(--spacer-3);
+}
+
+.subreddits_container button {
+  display: block;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  border: var(--border);
+  color: white;
+  font-size: 1.125rem;
+  margin-bottom: var(--spacer-1);
+  cursor: pointer;
+}
+
+.subreddits_container button:hover {
+  background-color: var(--color-primary-dark);
+}
